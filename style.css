@@ -1,3 +1,72 @@
-input .number {
-  width: 50vw;
+/* reset box sizing*/
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1,
+p,
+a {
+  color: rgb(113, 170, 255);
+  font-size: 1em;
+}
+
+h1 {
+  padding: 50px;
+}
+
+/* TASK INPUT */
+input[type="text"] {
+  width: 55vw;
+  padding: 20vh 20vh 0vh 20vh;
+  border: none;
+  border-bottom: 5px solid rgb(255, 217, 217);
+  color: rgb(255, 217, 217);
+  text-align: center;
+  font-size: 6em;
+  text-align: center;
+}
+
+input[type="text"]:focus {
+  color: rgb(255, 217, 217);
+}
+
+input.number {
+  margin-bottom: 10%;
+}
+
+::placeholder {
+  color: rgb(255, 217, 217);
+}
+
+::placeholder:focus {
+  color: rgb(255, 217, 217);
+}
+
+li {
+  color: rgb(117, 244, 157);
+  margin-bottom: 5px;
+}
+
+a {
+  margin-top: 50px;
 }
