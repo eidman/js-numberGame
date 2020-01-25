@@ -37,7 +37,7 @@ h1 {
 /* TASK INPUT */
 input[type="text"] {
   width: 55vw;
-  padding: 20vh 20vh 0vh 20vh;
+  padding: 15vh 20vh 0vh 20vh;
   border: none;
   border-bottom: 5px solid rgb(255, 217, 217);
   color: rgb(255, 217, 217);
