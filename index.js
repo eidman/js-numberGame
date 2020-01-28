@@ -6,15 +6,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function checkStatus(guessedNumber) {
     if (isNaN(guessedNumber)) {
-      return `You must guess a number you fool!`;
+      return `you must guess a number you fool!`;
     } else if (guessedNumber < 1 || guessedNumber > numberMax) {
-      return `You must guess a number between 1 and 100`;
+      return `you must guess a number between 1 and 100!`;
     } else if (randomNumber > guessedNumber) {
-      return `The number you seek is greater than ${guessedNumber}`;
+      return `the number you seek is greater than ${guessedNumber}`;
     } else if (randomNumber < guessedNumber) {
-      return `The number you seek is less than ${guessedNumber}`;
+      return `the number you seek is less than ${guessedNumber}`;
     } else if (guessedNumber == randomNumber) {
-      return `You win! ${guessedNumber} is the right number!`;
+      return `you win! ${guessedNumber} is the right number!`;
     }
   }
 
