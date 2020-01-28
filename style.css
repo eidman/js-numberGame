@@ -29,6 +29,7 @@ img {
   justify-content: flex-end;
 }
 
+/* GLOBAL */
 body {
   color: #fff;
   font-family: Helvetica, sans-serif;
@@ -38,7 +39,6 @@ body {
   display: grid;
   grid-template-columns: 20vw 40vw 40vw;
   grid-template-rows: 50vh 50vh;
-  /* grid-template-columns: 1.5em 1fr 1.5em; */
   grid-template-areas:
     "side1 box1 box2"
     "side2 box3 box4";
@@ -46,11 +46,13 @@ body {
 
 /* NUMBER INPUT */
 input[type="text"] {
+  width: 20vw;
   padding: 40px;
-  background-color: rgb(34, 34, 34);
+  background-color: #353C43;
   text-align: center;
   font-size: 16px;
   text-align: center;
+  border: hidden;
 }
 
 input[type="text"]:focus {
@@ -66,31 +68,18 @@ input.number {
 }
 
 a {
-  position: absolute;
-  background-color: #969696;
+  background-color: #6F7881;
   font-size: 16px;
   padding: 40px 0px;
   width: 20vw;
 }
 
 li {
-  color: #969696;
+  color: #6F7881;
   font-size: 16px;
   line-height: 1.15em;
   padding: 0px 50px 20px 50px;
 }
-
-/* GRID */
-
-/* @media only screen and (min-width: 860px) {
-  body {
-    grid-template-columns: 1.5em minmax(400px, 650px) minmax (200px, 350px) 1.5em;
-    grid-template-areas:
-      "header header header header"
-      ". main side ."
-      "footer footer footer footer";
-  }
-} */
 
 .sidebar1 {
   grid-area: side1;
@@ -100,19 +89,51 @@ li {
   grid-area: side2;
 }
 
+.box {
+  padding 500px;
+}
+
 .box1 {
   grid-area: box1;
-  background-color: #0062ff;
+  background-color: #0367A7;
 }
 .box2 {
   grid-area: box2;
-  background-color: #d800ff;
+  background-color: #797CA0;
 }
 .box3 {
   grid-area: box3;
-  background-color: #ff004e;
+  background-color: #8F466A;
 }
 .box4 {
   grid-area: box4;
-  background-color: #001671;
+  background-color: #5E9BB6;
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 10vh 10vh 70vh 10vh;
+    grid-template-areas:
+      "box1 box2"
+      "box3 box4"
+      "side1 side1"
+      "side2 side2";
+  }
+
+  input[type="text"] {
+    width: 100vw;
+    font-size: 16px;
+    padding: 3.8vh;
+  }
+
+  a {
+    background-color: #969696;
+    font-size: 16px;
+    padding: 3.8vh;
+    width: 100vw;
+  }
 }
