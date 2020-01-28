@@ -23,31 +23,31 @@ img {
   justify-content: center;
 }
 
-h1,
-p,
-a {
-  color: rgb(113, 170, 255);
-  font-size: 1em;
-}
-
-h1 {
-  padding: 50px;
-}
-
-/* TASK INPUT */
-input[type="text"] {
-  width: 55vw;
-  padding: 15vh 20vh 0vh 20vh;
-  border: none;
-  border-bottom: 5px solid rgb(255, 217, 217);
-  color: rgb(255, 217, 217);
+body {
+  color: #fff;
+  font-family: Helvetica, sans-serif;
+  font-size: 60px;
+  font-weight: normal;
   text-align: center;
-  font-size: 6em;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  /* grid-template-columns: 1.5em 1fr 1.5em; */
+  grid-template-areas:
+    "side box1 box2"
+    "side box3 box4";
+}
+
+/* NUMBER INPUT */
+input[type="text"] {
+  padding: 50px;
+  background-color: #969696;
+  text-align: center;
+  font-size: 18px;
   text-align: center;
 }
 
 input[type="text"]:focus {
-  color: rgb(255, 217, 217);
+  color: #fff;
 }
 
 input.number {
@@ -55,18 +55,51 @@ input.number {
 }
 
 ::placeholder {
-  color: rgb(255, 217, 217);
+  color: #fff;
 }
 
 ::placeholder:focus {
-  color: rgb(255, 217, 217);
+  color: #fff;
 }
 
 li {
-  color: rgb(117, 244, 157);
+  color: #969696;
+  font-size: 18px;
   margin-bottom: 5px;
 }
 
 a {
   margin-top: 50px;
+}
+
+/* GRID */
+
+/* @media only screen and (min-width: 860px) {
+  body {
+    grid-template-columns: 1.5em minmax(400px, 650px) minmax (200px, 350px) 1.5em;
+    grid-template-areas:
+      "header header header header"
+      ". main side ."
+      "footer footer footer footer";
+  }
+} */
+.sidebar {
+  grid-area: side;
+}
+
+.box1 {
+  grid-area: box1;
+  background-color: #0062ff;
+}
+.box2 {
+  grid-area: box2;
+  background-color: #d800ff;
+}
+.box3 {
+  grid-area: box3;
+  background-color: #ff004e;
+}
+.box4 {
+  grid-area: box4;
+  background-color: #001671;
 }
