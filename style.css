@@ -55,7 +55,8 @@ input[type="text"] {
   border: hidden;
 }
 
-input[type="text"]:focus {
+input[type="text"]:hover, input[type="text"]:focus {
+  background-color:rgb(227, 209, 191);
   color: #fff;
 }
 
@@ -68,6 +69,7 @@ input.number {
 }
 
 a {
+  cursor: cell;
   background-color: #757E87;
   font-size: 16px;
   padding: 40px 0px;
