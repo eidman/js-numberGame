@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
     guessCount++;
     if (guessCount === 7 && guessedNumber != randomNumber) {
       // show the you lose
-      addNumber("you lose");
+      addNumber("too many guesses. you lose!");
     } else if (value != "") addNumber(check);
 
     guessedNumber.value = "";
